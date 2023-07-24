@@ -1,19 +1,6 @@
+//without template literals:
+
 /*
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected} ✅✅✅`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected} 🛑🛑🛑`);
-  }
-};
-s
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-
-*/
-
-
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log("✅✅✅ Assertion Passed: " + actual + " === " + expected + "✅✅✅");
@@ -26,10 +13,24 @@ const assertEqual = function(actual, expected) {
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
+*/
 
+
+// With template literals:
+
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected} ✅✅✅`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected} 🛑🛑🛑`);
+  }
+};
+
+// TEST CODE
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual(1, 1);
 
 /*
-
 countOnly function: given an array and an object,
 it will return an object containing counts of everything
 that the input object listed.
