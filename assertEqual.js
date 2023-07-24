@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected} 🛑🛑🛑`);
   }
 };
-
+s
 // TEST CODE
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
@@ -18,7 +18,7 @@ const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log("✅✅✅ Assertion Passed: " + actual + " === " + expected + "✅✅✅");
   } else {
-    console.log("🛑🛑🛑 Assertion Failed: " +actual + "!== " + expected + "🛑🛑🛑");
+    console.log("🛑🛑🛑 Assertion Failed: " + actual + "!== " + expected + "🛑🛑🛑");
   }
 };
 
@@ -26,11 +26,14 @@ const assertEqual = function(actual, expected) {
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
+
+
 /*
+
 countOnly function: given an array and an object,
-it will return an object containing counts of everything 
+it will return an object containing counts of everything
 that the input object listed.
-*/
+
 
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
@@ -47,7 +50,7 @@ const countOnly = function(allItems, itemsToCount) {
       } else {
         results[item] = 1;
       }
-    } 
+    }
   }
   return results;
 }
@@ -71,3 +74,5 @@ assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
+
+*/
