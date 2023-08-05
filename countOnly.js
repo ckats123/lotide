@@ -6,23 +6,29 @@ const assertEqual = function(actual, expected) {
     }
   };
   
+  /*
   // TEST CODE
   assertEqual("Lighthouse Labs", "Bootcamp");
   assertEqual(1, 1);
-  
-  // countOnly function: given an array and an object, 
-  //it will return an object containing cousnts of everything that the input object listed.
+  */
+
+
+  // countOnly function: given an array and an object,
+  //it will return an object containing counts of everything that the input
+  //object listed.
+  // for this case, items are limited to strings
   
   // allItems: an array of strings that we need to look through
   // itemsToCount: an object specifying what to count
   
   const countOnly = function(allItems, itemsToCount) {
+    let results = {};
     for (const item of allItems) {
       console.log(item);
       if (itemsToCount[item]) {
         if (results[item]) {
           results[item] += 1;
-        }w
+        }
         else {
           results[item] = 1;
       }
