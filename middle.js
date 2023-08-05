@@ -6,6 +6,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected} 🛑🛑🛑`);
   }
 };
+
 // TEST CODE
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
@@ -20,9 +21,9 @@ const assertEqual = function(actual, expected) {
 };
   
 /*
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+  // TEST CODE
+  assertEqual("Lighthouse Labs", "Bootcamp");
+  assertEqual(1, 1);
 */
 
 /* Implement a function eqArrays which takes in two arrays and
@@ -34,7 +35,7 @@ const eqArrays = function(array1, array2) {
     result = false;
   } else {
     for (let i = 0; i < array1.length; i++) {
-      //console.log(array1[i], array2[i]);
+    //console.log(array1[i], array2[i]);
       if (array1[i] !== array2[i]) {
         result = false;
       }
@@ -43,11 +44,14 @@ const eqArrays = function(array1, array2) {
   return result;
 };
 
+/*
+// TEST CODE
 eqArrays([1, 2, 3], [1, 2, 3]); // => true
 eqArrays([1, 2, 3], [3, 2, 1]); // => false
 
 eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
 eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
+*/
 
 /* Instruction:
 Use assertEqual to write test cases for various scenarios.
@@ -83,6 +87,13 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+/*
+// TEST CODE
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // => should FAIL
+*/
+
+
 /*Implement middle which will take in an array and return the middle-most element(s)
 of the given array.
 
@@ -114,7 +125,12 @@ const middle = function(array) {
   }
 };
 
-// TEST CODE
-assertArraysEqual(middle([1]), []); // => []
-assertArraysEqual(middle([1, 2]), []); // => []
-assertArraysEqual(middle([1, 2, 3]), [2]); // => [2]
+// Test Code
+console.log(middle([1])); // => []
+console.log(middle([1, 2])); // => []
+console.log(middle([1, 2, 3])); // => [2]
+console.log(middle([1, 2, 3, 4, 5])); // => [3]
+console.log(middle([1, 2, 3, 4])); // => [2, 3]
+console.log(middle([1, 2, 3, 4, 5, 6, 7, 8, 9])); // => [5]
+console.log(middle([1, 2, 3, 4, 5, 6, 7, 8])); // => [4, 5]
+console.log(middle([1, 2, 3, 4, 5, 6, 7])); // => [4]
