@@ -29,3 +29,19 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 // Test Case 2 of tail.js: ...
 const result1 = tail(["Hi"]);
 assertEqual(result1[0], "Hi"); //ensure empty array is returned
+
+// test.eqArrays.js
+const eqArrays = require("../eqArrays");
+
+// Test Code for eqArrays.js
+eqArrays([1, 2, 3], [1, 2, 3]); // => true
+eqArrays([1, 2, 3], [3, 2, 1]); // => false
+
+eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
+eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
+
+// Test Cases for eqArrays.js
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => should PASS
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => should PASS
