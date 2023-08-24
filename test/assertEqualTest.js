@@ -52,3 +52,11 @@ const assertArraysEqual = require("../assertArraysEqual");
 // Test Case for assertArraysEqual.js
 assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
 assertArraysEqual([1, 2, 3], [3, 2, 1]); // => should FAIL
+
+// test/middleTest.js
+const middle = require("../middle");
+
+// Test Case for middle.js
+assertArraysEqual(middle([1]), []); // => should PASS
+assertArraysEqual(middle([1, 2]), []); // => should PASS
+assertArraysEqual(middle([1, 2, 3]), [2]); // => should PASS
