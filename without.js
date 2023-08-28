@@ -11,14 +11,26 @@ assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 */
 
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
-    console.log("✅✅✅ Assertion Passed: " + actual + " === " + expected + "✅✅✅");
+    console.log(
+      "✅✅✅ Assertion Passed: " +
+        actual +
+        " === " +
+        expected +
+        "✅✅✅"
+    );
   } else {
-    console.log("🛑🛑🛑 Assertion Failed: " + actual + "!== " + expected + "🛑🛑🛑");
+    console.log(
+      "🛑🛑🛑 Assertion Failed: " +
+        actual +
+        "!== " +
+        expected +
+        "🛑🛑🛑"
+    );
   }
 };
-  
+
 /*
   // TEST CODE
   assertEqual("Lighthouse Labs", "Bootcamp");
@@ -28,7 +40,7 @@ const assertEqual = function(actual, expected) {
 /* Implement a function eqArrays which takes in two arrays and
 returns true or false, based on a perfect match. */
 
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   let result = true;
   if (array1.length !== array2.length) {
     result = false;
@@ -75,11 +87,23 @@ for assertArraysEqual. That said, you can and should call the function
  below its declaration and visually ensure that the message printed
  to the console is accurate. */
 
-const assertArraysEqual = function(array1, array2) {
+const assertArraysEqual = function (array1, array2) {
   if (eqArrays(array1, array2)) {
-    console.log("✅✅✅ Assertion Passed: " + array1 + " === " + array2 + "✅✅✅");
+    console.log(
+      "✅✅✅ Assertion Passed: " +
+        array1 +
+        " === " +
+        array2 +
+        "✅✅✅"
+    );
   } else {
-    console.log("🛑🛑🛑 Assertion Failed: " + array1 + "!== " + array2 + "🛑🛑🛑");
+    console.log(
+      "🛑🛑🛑 Assertion Failed: " +
+        array1 +
+        "!== " +
+        array2 +
+        "🛑🛑🛑"
+    );
   }
 };
 
@@ -95,7 +119,7 @@ Instruction
 Use assertArraysEqual to write test cases for various scenarios.
 
 The tests can be written below the definition of your function. */
-const without = function(source, itemsToRemove) {
+const without = function (source, itemsToRemove) {
   let newArray = [];
   for (let i = 0; i < source.length; i++) {
     if (itemsToRemove.includes(source[i])) {
@@ -103,14 +127,15 @@ const without = function(source, itemsToRemove) {
     } else {
       newArray = source;
     }
-  } return newArray;
+  }
+  return newArray;
 };
-
-
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+// Test Code
+
+console.log(without([1, 2, 3], [1])); // => [2, 3]
