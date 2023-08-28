@@ -25,6 +25,27 @@ middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
 
 const middle = function (array) {
   let middleArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array.length <= 2) {
+      return [];
+    } else if (array.length % 2 === 0) {
+      middleArray.push(
+        array[array.length / 2 - 1],
+        array[array.length / 2]
+      );
+      return middleArray;
+    } else {
+      middleArray.push(array[Math.floor(array.length / 2)]);
+      return middleArray;
+    }
+  }
+  return middleArray;
+};
+module.exports = middle;
+
+/*
+const middle = function (array) {
+  let middleFirst = 0;
   if (array.length <= 2) {
     return [];
   } else if (array.length % 2 === 0) {
@@ -32,7 +53,6 @@ const middle = function (array) {
   } else {
     return [array[Math.floor(array.length / 2)]];
   }
-  return middleArray;
+  return middleFirst;
 };
-
-module.exports = middle;
+*/
