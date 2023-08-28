@@ -1,4 +1,4 @@
-// shortened version of index
+// shortened version of index file via ES6 object shorthand
 
 const head = require("./head");
 const tail = require("./tail");
