@@ -35,3 +35,4 @@ assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 console.log(without([1, 2, 3], [1])); // => [2, 3]
 console.log(without(["hi", "hello", "bye"], ["bye"])); // => ['hi', 'hello']
+console.log(without(words, ["world"])); // => ['hello', 'lighthouse']
