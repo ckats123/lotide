@@ -1,4 +1,3 @@
-const assertEqual = require("./assertEqual");
 const eqArrays = require("./eqArrays");
 const assertArraysEqual = require("./assertArraysEqual");
 
@@ -16,11 +15,9 @@ Use assertArraysEqual to write test cases for various scenarios.
 The tests can be written below the definition of your function. */
 const without = function (source, itemsToRemove) {
   let newArray = [];
-  for (let i = 0; i < source.length; i++) {
-    if (itemsToRemove.includes(source[i])) {
-      newArray = source.splice(i, 1);
-    } else {
-      newArray = source;
+  for (const item of source) {
+    if (!itemsToRemove.includes(item)) {
+      newArray.push(item);
     }
   }
   return newArray;
