@@ -28,34 +28,34 @@ The following functions are currently implemented:
 
 - Assert Equal: Compares two values and returns true if they're equal, false otherwise.
 
-- Head: Returns the first element of an array.
+- head(array): Returns the first element of an array.
 
-- Tail: Returns all elements of an array except the first one.
+- tail(array): Returns all elements of an array except the first one.
 
-- eqArrays: Compares two arrays and returns true if they're equal, false otherwise.
+- eqArrays(array1, array2): Compares two arrays and returns true if they're equal, false otherwise.
 
-- assertArraysEqual: Prints a message after comparing two arrays.
+- assertArraysEqual(array1, array2): Prints a message after comparing two arrays.
 
-- without: Removes specified items from a source array, returning a new array.
+- without(source, itemsToRemove): Removes specified items from a source array, returning a new array.
 
-- flatten: Returns a flattened version of an array that might include nested arrays.
+- flatten(actual, expected): Returns a flattened version of an array that might include nested arrays.
 
-- middle: Returns the middle element of an array.
+- middle(array): Returns the middle element of an array.
 
-- countOnly: Counts specific items in a collection.
+- countOnly(allItems, itemsToCount): Counts specific items in a collection.
 
-- countLetters: Counts occurrences of letters in a sentence.
+- countLetters(sentence): Counts occurrences of letters in a sentence.
 
-- letterPositions: Returns indices of letter positions in a string.
+- letterPositions(sentence) : Returns indices of letter positions in a string.
 
-- findKeyByValue: Returns the first key corresponding to a given value in an object.
+- findKeyByValue(object, value): Returns the first key corresponding to a given value in an object.
 
-- eqObjects: Compares two objects and returns true if they're equal, false otherwise.
+- eqObjects(object1, object2): Compares two objects and returns true if they're equal, false otherwise.
 
-- assertObjectsEqual: Checks if two objects are equal and prints a message.
+- assertObjectsEqual(actual, expected): Checks if two objects are equal and prints a message.
 
-- Map: Creates a new array by applying a callback to each item in an array.
+- map(array, callback): Creates a new array by applying a callback to each item in an array.
 
-- takeUntil: Returns a slice of an array based on a callback condition.
+- takeUntil(data1, (x) => x < 0): Returns a slice of an array based on a callback condition.
 
-- findKey: Returns the first key in an object based on a callback condition.
+- findKey(object, callback) : Returns the first key in an object based on a callback condition.
