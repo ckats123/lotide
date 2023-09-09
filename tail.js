@@ -9,7 +9,6 @@ const tail = function (array) {
   } else {
     return array.slice(1);
   }
-  return newArray;
 };
 
 module.exports = tail;
