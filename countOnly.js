@@ -1,13 +1,5 @@
 const assertEqual = require("./assertEqual");
 
-// countOnly function: given an array and an object,
-//it will return an object containing counts of everything that the input
-//object listed.
-// for this case, items are limited to strings
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
-
 const countOnly = function (allItems, itemsToCount) {
   let results = {};
   for (const item of allItems) {
@@ -46,3 +38,5 @@ assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
+
+module.exports = countOnly;

@@ -1,31 +1,27 @@
 const assertEqual = require("./assertEqual");
 const eqArrays = require("./eqArrays");
 
-/*
-Implement the definition for function eqObjects which will take in two
-objects and returns true or false, based on a perfect match.
-*/
-
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
-
 const eqObjects = function (object1, object2) {
-  // console.log("object1:", object1);
-  // console.log("object2:", object2);
   let result = false;
-  if (Object.keys(object1).length === Object.keys(object2).length) {
-    for (let key in object1) {
-      if (object1[key] === object2[key]) {
+  let array1 = Object.keys(object1);
+  let array2 = Object.keys(object2);
+  if (array1.length !== array2.length) {
+    return result;
+  } else {
+    for (let key of array1) {
+      if (
+        Array.isArray(object1[key]) &&
+        Array.isArray(object2[key])
+      ) {
+        result = eqArrays(object1[key], object2[key]);
+      } else if (object1[key] === object2[key]) {
         result = true;
       } else {
         result = false;
       }
     }
   }
-  return result;
 };
-
-module.exports = eqObjects;
 
 // TEST CODE
 assertEqual(eqObjects({ x: "a", y: "2" }, { y: "2", x: "a" }), true); // => true
@@ -66,3 +62,5 @@ const longSleeveMultiColorShirtObject = {
   sleeveLength: "long",
 };
 eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject); // => false
+
+module.exports = eqObjects;

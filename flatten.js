@@ -1,42 +1,5 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(
-      "✅✅✅ Assertion Passed: " +
-        actual +
-        " === " +
-        expected +
-        "✅✅✅"
-    );
-  } else {
-    console.log(
-      "🛑🛑🛑 Assertion Failed: " +
-        actual +
-        "!== " +
-        expected +
-        "🛑🛑🛑"
-    );
-  }
-};
-
-const eqArrays = function (array1, array2) {
-  let result = true;
-  if (array1.length !== array2.length) {
-    result = false;
-  } else {
-    for (let i = 0; i < array1.length; i++) {
-      //console.log(array1[i], array2[i]);
-      if (array1[i] !== array2[i]) {
-        result = false;
-      }
-    }
-  }
-  return result;
-};
-
-/* Instruction: Create a function flatten which will
-take in an array containing elements including nested arrays of elements,
- and return a "flattened" version of the array.
- */
+const assertEqual = require("./assertEqual");
+const eqArrays = require("./eqArrays");
 
 const flatten = function (array) {
   let newArray = [];

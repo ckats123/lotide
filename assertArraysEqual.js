@@ -1,4 +1,3 @@
-const assertEqual = require("./assertEqual");
 const eqArrays = require("./eqArrays");
 
 /* Implement assertArraysEqual which will take in two arrays and
