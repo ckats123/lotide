@@ -21,6 +21,7 @@ const eqObjects = function (object1, object2) {
       }
     }
   }
+  return result;
 };
 
 // TEST CODE
